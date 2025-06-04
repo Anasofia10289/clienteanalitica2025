@@ -21,7 +21,7 @@ return usuariosConsultados
 
 }
 
-export async functuion agregarUsuario(datosUsuario){
+export async function agregarUsuario(datosUsuario){
 
     const URL="http://localhost:8080/Users"
     const PETICION={
