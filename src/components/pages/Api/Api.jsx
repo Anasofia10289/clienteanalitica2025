@@ -1,4 +1,18 @@
+import{ useState, useEffect } from 'react';
+import { consulotarUsuarios } from '../../../services/serviciosUsuarios';
 export function Api(){
+
+    const [usuarios, setUsuarios] = useState(null);
+    const [cargando, setCargando] = useState(true);
+
+    useEffect(function(){
+        consulotarUsuarios().then(function(respuesta){
+            console.log(respuesta)
+            setUsuarios(respuesta)
+            setCargando(false)
+    })
+},[])
+
     return(
 
         <>
